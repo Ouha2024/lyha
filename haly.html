@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    
+</head>
+<body>
+   
+   <h2 class="h2">bonjour les amis vous allez bien</h2>
+   <h2 id="f">bonsoir</h2>
+  <script>
+     var h2=document.getElementById("f");
+     h2.style.color="red"
+     var H1=document.createElement("h1")
+     H1.innerHTML=` <span class="span1"> bonjour les amis </span>vous allez bien`;
+     let span=document.getElementsByClassName("span1");
+     document.body.appendChild(H1);
+     span[0].style.backgroundColor="red"
+    
+
+  </script>  
+</body>
+</html>

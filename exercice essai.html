@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice essai</title>
+    <style>
+        .maclasse {
+            border: 2px solid;
+            padding: 10px;
+            box-shadow: 2px 2px 5px gray;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const div =document.createElement('div');
+        div.textContent="mon bebe dort comme un ange";
+        div.style.backgroundColor="blue";
+        div.style.fontSize="20px";
+        div.style.margin="20px";
+        div.style.textAlign="center"
+        document.body.appendChild(div);
+
+
+        const b=document.createElement("b");
+        b.textContent="le bouton qui permet de naviguer";
+        b.onclick=function(){
+            div.textContent="je modifie le texte";
+        };
+        document.body.appendChild(b);
+        div.classList.add("maclasse");
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculateur simple</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #result {
+      margin-bottom: 10px;
+      font-size: 24px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 200px;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="result"></div>
+
+  <button onclick="appendToExpression('12')">12</button>
+  <button onclick="appendToExpression('+')">+</button>
+  <button onclick="appendToExpression('5')">5</button>
+  <button onclick="calculateResult()">=</button>
+
+  <script>
+    let expression = "";
+
+    function appendToExpression(value) {
+      expression += value;
+      document.getElementById('result').innerText = expression;
+    }
+
+    function calculateResult() {
+      try {
+        const result = eval(expression);
+        document.getElementById('result').innerText = result;
+        expression = ""; 
+      } catch (e) {
+        document.getElementById('result').innerText = "Erreur";
+        expression = "";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
